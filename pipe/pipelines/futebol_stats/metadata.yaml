@@ -1,0 +1,143 @@
+blocks:
+- all_upstream_blocks_executed: true
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - data_cleaning
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: get_data
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_loader
+  upstream_blocks: []
+  uuid: get_data
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_path: null
+  downstream_blocks:
+  - set_match_points
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: data_cleaning
+  retry_config: null
+  status: updated
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - get_data
+  uuid: data_cleaning
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - add_columns
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: set_match_points
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - data_cleaning
+  uuid: set_match_points
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks:
+  - save_data
+  - melt_dataframe
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: add_columns
+  retry_config: null
+  status: updated
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - set_match_points
+  uuid: add_columns
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_path: null
+  downstream_blocks:
+  - calculate_new_columns
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: melt_dataframe
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - add_columns
+  uuid: melt_dataframe
+- all_upstream_blocks_executed: false
+  color: null
+  configuration:
+    file_path: null
+  downstream_blocks:
+  - save_data
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: calculate_new_columns
+  retry_config: null
+  status: executed
+  timeout: null
+  type: transformer
+  upstream_blocks:
+  - melt_dataframe
+  uuid: calculate_new_columns
+- all_upstream_blocks_executed: false
+  color: null
+  configuration: {}
+  downstream_blocks: []
+  executor_config: null
+  executor_type: local_python
+  has_callback: false
+  language: python
+  name: save_data
+  retry_config: null
+  status: updated
+  timeout: null
+  type: data_exporter
+  upstream_blocks:
+  - add_columns
+  - calculate_new_columns
+  uuid: save_data
+callbacks: []
+concurrency_config: {}
+conditionals: []
+created_at: '2023-10-15 11:57:44.218684+00:00'
+data_integration: null
+description: null
+executor_config: {}
+executor_count: 1
+executor_type: null
+extensions: {}
+name: futebol-stats
+notification_config: {}
+retry_config: {}
+run_pipeline_in_one_process: false
+spark_config: {}
+tags: []
+type: python
+updated_at: '2023-11-19 19:00:00'
+uuid: futebol_stats
+widgets: []

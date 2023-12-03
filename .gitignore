@@ -1,0 +1,9 @@
+/auth/google/credentials.json
+**/**/__pycache__
+**/**/.env
+**/mage-ai.db
+EDA/
+**/.file_versions
+
+/pipe/io_config.yaml
+/pipe/metadata.yaml
