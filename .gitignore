@@ -4,6 +4,7 @@
 **/mage-ai.db
 EDA/
 **/.file_versions
-
+/app/.streamlit/secrets.toml
 /pipe/io_config.yaml
 /pipe/metadata.yaml
+Etapas projeto.md

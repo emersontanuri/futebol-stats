@@ -11,6 +11,8 @@ This project contains the frontend app created with Streamlit and the pipeline m
 
 You can check the frontend at the link below
 
+[Futebol Stats](https://link.com)
+
 ---
 
 Created by Emerson Tanuri
