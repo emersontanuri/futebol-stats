@@ -7,7 +7,7 @@
 ![Futebol Stats - Brasileirão Série A](img/image.png)
 
 The project delivers informations about the data collect from the Serie A Brazilian Tournament since 2007.
-This project contains the frontend app created with Streamlit and the pipeline manager created with Mage.ai.
+This project contains the frontend app created with Streamlit and the pipeline orchestrator created with Mage.ai.
 
 You can check the frontend at the link below
 
