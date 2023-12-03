@@ -40,7 +40,7 @@ st.write(
 
 st.write(
     f"""
-    ## 👨‍👩‍👧‍👧 :red[{top_five_most_audience_games["ano_str"].unique()[0]} - {top_five_most_audience_games["time_mandante"].unique()[0]} x {top_five_most_audience_games["time_visitante"].unique()[0]}]
+    ## 🎊 :red[{top_five_most_audience_games["ano_str"].unique()[0]} - {top_five_most_audience_games["time_mandante"].unique()[0]} x {top_five_most_audience_games["time_visitante"].unique()[0]}]
     ##### Foi o jogo com maior público já registrado no campeonato.
     """)
 
